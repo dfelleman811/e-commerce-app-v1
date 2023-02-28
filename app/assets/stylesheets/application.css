@@ -22,7 +22,7 @@
 .flex-container {
    display: flex;
    flex-flow: row wrap;
-   align-items: baseline;
+   align-items: baseline; /* meh - need to fix this - not important atm */
 }
 div.card {
    padding: 20px;

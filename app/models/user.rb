@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    
+    has_many :carts
 
     validates :username, presence: true, length:  {minimum: 8, maximum: 20}
     validate :password_must_have_special_characters
