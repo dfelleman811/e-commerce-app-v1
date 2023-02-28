@@ -1,0 +1,16 @@
+<h1>Products</h1>
+
+
+<% @products.each do |product| %>
+    <div class="card">
+        <%= image_tag(product.image, alt: "product image", style: "width:100%") if (product.image != nil && product.image != "placeholder") %>
+        <div class="container">
+            <h4><%= product.name %></h4>
+            <p>Price: <%= product.price %></p>
+            <hr>
+            <p><%= product.description %></p>
+            <p>Quantity: <%= product.quantity %></p>
+            <%= link_to "Details", product %>
+        </div>
+    </div>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>All Users</h1>
+
+<% @users.each do |user| %>
+
+    <div id="user_<%= user.id %>" class="card">
+        <%= image_tag(user.profile_image, alt: "Profile Image", style: "width:100%") if user.profile_image != nil %>
+        <div class="container">
+            <h4><b><%= user.username %></b></h4>
+            <p><%= user.role %></p>
+            <%= link_to "Details", user %>
+        </div>
+    </div>
+
+<% end %>

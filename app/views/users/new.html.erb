@@ -1,0 +1,25 @@
+<h1>Create a new user account</h1>
+
+
+<% if @user.errors.any? %>
+    <h3>The below errors prevented creating your new account. Please fix them and click submit again.</h3>
+    <ul>
+        <% @user.errors.full_messages.each do |e| %>
+            <li><%= e %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_with model: @user do |form| %>
+    <div>
+        <%= form.label :username %>
+        <%= form.text_field :username %>
+    </div>
+
+    <div>
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+    </div>
+
+    <%= form.submit %>
+<% end %>
