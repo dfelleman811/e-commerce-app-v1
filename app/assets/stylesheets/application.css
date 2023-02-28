@@ -14,11 +14,20 @@
  *= require_self
  */
 
-/* Card Styling for Profile Pictures */
+ body {
+   background-color:grey;
+ }
 
+/* Card Styling for Profile Pictures */
+.flex-container {
+   display: flex;
+   flex-flow: row wrap;
+   align-items: baseline;
+}
 div.card {
    padding: 20px;
    margin: 10px;
+   background-color: white;
 }
 
  .card {
