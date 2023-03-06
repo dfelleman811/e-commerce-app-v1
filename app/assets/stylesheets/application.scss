@@ -14,9 +14,25 @@
  *= require_self
  */
 
+@import "bootstrap";
+
  body {
-   background-color:grey;
+   background-color:whitesmoke;
  }
+
+ 
+ /* Styling for Flash messages */
+ div.success {
+   background-color: lightgreen;
+   border: 4px solid green;
+   padding: 2rem
+}
+
+div.failure {
+   background-color: lightcoral;
+   border: 4px solid red;
+   padding: 2rem
+}
 
 /* Card Styling for Profile Pictures */
 .flex-container {
@@ -32,7 +48,7 @@ div.card {
 
  .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 40%;
+    width: 25%;
  }
 
  .container {

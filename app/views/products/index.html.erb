@@ -1,18 +1,29 @@
+
+
+
+<div class="container">
+
 <h1>Products</h1>
 
+
 <div class="flex-container">
+
+
+
+
     <% @products.each do |product| %>
         <div class="card">
-            <%= image_tag(product.image, alt: "product image", style: "width:100%") if (product.image != nil && product.image != "placeholder") %>
-            <div>
-                <h4><%= product.name %></h4>
+            <%= image_tag(product.image, alt: "product image", style: "width:100%", class: "card-img-top") if (product.image != nil && product.image != "placeholder") %>
+            <div class="card-body">
+                <h4 class="card-title"><%= product.name %></h4>
                 <p>Price: <%= product.price %></p>
                 <hr>
-                <p><%= product.description %></p>
+                <p class="card-text"><%= product.description %></p>
                 <p>Quantity: <%= product.quantity %></p>
                 <%= link_to "Details", product %>
-                <%= button_tag "Add to Cart", type: "submit" %>
+                <%= button_to "Add to Cart", cart_items_path(:product_id => product.id), class: "btn btn-success" %>
             </div>
         </div>
     <% end %>
+</div>
 </div>

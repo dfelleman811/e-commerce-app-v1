@@ -1,1 +1,8 @@
 <h1>your cart</h1>
+
+
+<% @cart.products.each do |product| %>
+    <p><%= product.name %></p>
+    <p><%= product.description %></p>
+    <p><%= product.price %></p>
+<% end %>

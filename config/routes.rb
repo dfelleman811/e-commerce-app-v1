@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+ 
   root "products#index"
-  resources :users, :products
+
+  resources :users, :products, :carts
+
+  post "cart_items" => "cart_items#create"
+
+  resources :sessions, only: [:new, :create, :destroy]
 end

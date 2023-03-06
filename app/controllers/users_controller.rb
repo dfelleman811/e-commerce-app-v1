@@ -30,10 +30,11 @@ class UsersController < ApplicationController
 
     def update
 
-        if @user.update(params.require(:user).permit(:username, :role, :profile_image))
+        if @user.update(user_params)
             flash.notice = "#{@user}'s profile successfully updated"
             redirect_to @user
         else
+            flash.alert = "Something went wrong"
             render :edit, status: :unprocessable_entity
         end
     
@@ -57,6 +58,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:username, :password, :role, :profile_image)
     end
 end

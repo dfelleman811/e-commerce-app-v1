@@ -1,25 +1,31 @@
+
+<div class="container">
+
 <%= form_with(model: user) do |form| %>
 
-    <div>
-        <%= form.label :username %>
-        <%= form.text_field :username %>
+    <div class="form-group">
+        <%= form.label :username, class: "form-label" %>
+        <%= form.text_field :username, class: "form-control" %>
     </div>
 
-    <div>
-        <%= form.label :password %>
-        <%= form.password_field :password %>
+    <div class="form-group">
+        <%= form.label :password, class: "form-label" %>
+        <%= form.password_field :password, class: "form-control" %>
     </div>
 
-    <div>
-        <%= form.label :profile_image %>
-        <%= form.text_field :profile_image %>
+    <div class="form-group">
+        <%= form.label :profile_image, class: "form-label"  %>
+        <%= form.text_field :profile_image, class: "form-control" %>
     </div>
 
-    <div>
-        <%= form.label :role %>
-        <%= form.text_field :role %>
+    <div class="form-group">
+        <%= form.label :role, class: "form-label"  %>
+        <%= form.text_field :role, class: "form-control" %>
     </div>
-
-    <%= form.submit %>
-
+    <div class="form-group">
+        <%= form.submit class: "form-control btn btn-sm btn-warning" %>
+    </div>
 <% end %>
+
+
+</div>
